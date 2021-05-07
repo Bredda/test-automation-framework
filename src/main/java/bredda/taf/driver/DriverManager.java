@@ -1,10 +1,7 @@
 package bredda.taf.driver;
 
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.Capabilities;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import static bredda.taf.configuration.ConfigurationManager.configuration;
 import java.io.File;
@@ -29,6 +26,10 @@ public class DriverManager {
         Path path = Paths.get(configuration().reportPath()).resolve(SCREENSHOT_FOLDER).resolve(UUID.randomUUID() + ".png");
         FileUtils.copyFile(screenshotFile , path.toFile());
         return path.toString();
+    }
+
+    public static JavascriptExecutor getJavascriptExecutor() {
+        return ((JavascriptExecutor)getDriver());
     }
 
     public static void setDriver(WebDriver driver) {

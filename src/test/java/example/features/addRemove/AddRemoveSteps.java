@@ -1,4 +1,4 @@
-package example.features;
+package example.features.addRemove;
 
 import io.qameta.allure.Step;
 
@@ -26,7 +26,7 @@ public class AddRemoveSteps {
         return this;
     }
 
-    @Step("Verify there is exactly {0} element(s)")
+    @Step("Verify there is exactly {expected} element(s)")
     public AddRemoveSteps assertNumberOfElementIs(int expected) {
         assertThat(page.getNumberOfElements() ).isEqualTo(expected);
         return this;

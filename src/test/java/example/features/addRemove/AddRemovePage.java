@@ -1,4 +1,4 @@
-package example.features;
+package example.features.addRemove;
 
 import bredda.taf.page.AbstractPageObject;
 import bredda.taf.page.Page;
