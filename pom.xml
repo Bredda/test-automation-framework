@@ -34,7 +34,6 @@
         <browser>chrome</browser>
         <headless>false</headless>
         <aspectj.version>1.9.6</aspectj.version>
-        <tags></tags>
         <allure.version>2.13.8</allure.version>
         <allure-maven.version>2.10.0</allure-maven.version>
         <allure-environment-writer.version>1.0.0</allure-environment-writer.version>
@@ -201,24 +200,6 @@
             <id>edge</id>
             <properties>
                 <browser>edge</browser>
-            </properties>
-        </profile>
-        <profile>
-            <id>web</id>
-            <properties>
-                <tags>WEB</tags>
-            </properties>
-        </profile>
-        <profile>
-            <id>rest</id>
-            <properties>
-                <tags>REST</tags>
-            </properties>
-        </profile>
-        <profile>
-            <id>windows</id>
-            <properties>
-                <tags>WINDOWS</tags>
             </properties>
         </profile>
     </profiles>
